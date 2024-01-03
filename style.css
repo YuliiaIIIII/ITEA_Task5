@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header_container,
+.footer_container{
+    background-color: rgb(0, 127, 0);
+    color: white;
+    text-align: center;
+}
+.header_container{
+    font-size: 22px;
+}
+.footer_container{
+    font-size: 18px;
+}
+main{
+    background-color: rgb(255, 233, 204);
+}
