@@ -1,6 +1,4 @@
-//  https://jsonplaceholder.typicode.com/ 
-// 2) блок мейн в якому слайдер з 10 постів взятими з арі яке вище, 
-//при кліку на блок конкретного юзера ми переходимо на нову сторінку того юзера де висвітлені усі його дані кожен юзер має містити свої дані взяті з апішки
+// 2) блок мейн в якому слайдер з 10 постів 
 
 const userList = document.querySelector('.userList');
 userList.setAttribute('style', 'display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; padding-top: 10px; padding-bottom: 30px');
@@ -39,12 +37,13 @@ async function getUserList() {
             let nameDiv = document.createElement('div');
             nameDiv.setAttribute('class', 'userName');
             userCard.appendChild(nameDiv);
-            let nameName = document.createElement('p');
-            nameName.setAttribute('style', 'text-align: center;');
-            nameName.innerHTML = `<a href="${user.id}">${user.name}</a>`;
+
+            let nameName = document.createElement('a');
+            nameName.textContent = user.name;
+            nameName.setAttribute('href', `user_info.html?user_id=${user.id}`);
             nameDiv.appendChild(nameName);
         }
-        addUser()
+        addUser(user)
     });  
 }
 getUserList ()
