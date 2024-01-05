@@ -34,7 +34,7 @@ fetch(`${USERS_URL}/${userId}`)
 			userDetails.appendChild(div);
 			const infoElement = document.createElement('p');
 			div.appendChild(infoElement);
-			div.innerHTML = `<h4 class="user_title">${element.info_title}:</h4><p>${element.info_value}</p>`;
+			div.innerHTML = `<h4 class="user_title">${element.info_title}:</h4><p class="infotext_style">${element.info_value}</p>`;
 		});
 	}
 	
