@@ -102,7 +102,7 @@ main{
 	box-shadow: 4px 4px 0px 1px rgb(89 60 41 / 36%);
 }
 .userCard:hover{
-	box-shadow: 6px 6px 14px 3px rgba(168 101 62 / 53%);
+	box-shadow: 6px 6px 14px 3px rgba(70 41 25 / 53%);
 }
 .userAvatar{
 	width: 40px;
@@ -152,7 +152,7 @@ a:visited{
 		text-align: center;
 		padding-bottom: 20px;
 }
-.button {
+.button{
 	display: inline-block;
 	border-radius: 4px;
 	background-color: #b3e4b3;
@@ -163,6 +163,6 @@ a:visited{
 	box-shadow: 4px 4px 0px 1px darkolivegreen;
 }
 .button:hover{
-	padding: 5px 20px;
+	padding: 5px 15px;
 	cursor: pointer;
 }
