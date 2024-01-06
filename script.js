@@ -1,8 +1,6 @@
 // 2) блок мейн в якому слайдер з 10 постів 
-
-const userList = document.querySelector('.userList');
-userList.setAttribute('style', 'display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; padding-top: 10px; padding-bottom: 30px');
 const userPosts = document.querySelector('.userPosts');
+const userList = document.querySelector('.userList');
 
 const API_URL = 'https://jsonplaceholder.typicode.com/';
 const ALL_USERS = 'users';
@@ -14,6 +12,7 @@ fetch(API_URL + ALL_POSTS)
 		posts = posts.sort(() => Math.random() - 0.5).slice(0, 10);
 		posts.forEach(post => {
 		const postElement = document.createElement("div");
+		postElement.setAttribute('class','post_card')
 		postElement.innerHTML = `<h4>${post.title}</h4><p>${post.body}</p>`;
 		userPosts.appendChild(postElement);
 	});

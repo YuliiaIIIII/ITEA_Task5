@@ -34,16 +34,59 @@ main{
 	margin: 0 auto;
 }
 .main_title{
+	width: 20%;
+	margin: 0 auto;
 	text-align: center;
-	font-size: 28px;
-	font-weight: 600;
+	font-size: 32px;
+	font-weight: 700;
 	padding: 20px 0;
 	text-decoration: underline;
 }
 .slider_block,
 .info_container{
 	padding-top: 100px;
-}  
+}
+.userPosts{
+	display: flex;
+	justify-content: center; 
+	flex-wrap: wrap; 
+	gap: 30px; 
+	padding-top: 10px; 
+	padding-bottom: 30px
+}
+.post_card{
+	display: inline-block;
+	align-items: center;
+	flex-wrap: nowrap;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 15px 25px;
+	width: 30%;
+	box-shadow: 4px 4px 0px 1px rgba(85, 151, 125, 0.36);
+}
+.post_card>h4{
+	padding: 0 10px 15px;
+	font-size: 26px;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: overline;
+	text-decoration-color: #3f8a5b;
+	line-height: 40px;
+}
+.post_card>p{
+	text-align: justify;
+	padding: 0 10px;
+	font-size: 20px;
+	line-height: 30px;
+}
+.userList{
+	display: flex; 
+	justify-content: center; 
+	flex-wrap: wrap; 
+	gap: 30px; 
+	padding-top: 10px; 
+	padding-bottom: 40px
+}
 .userCard{
 	display: flex;
 	align-items: center;
@@ -54,6 +97,9 @@ main{
 	width: 23%;
 	height: 80px;
 	box-shadow: 4px 4px 0px 1px rgb(52 80 69 / 36%);
+}
+.userCard:hover{
+	width: 25%;
 }
 .userAvatar{
 	width: 40px;
