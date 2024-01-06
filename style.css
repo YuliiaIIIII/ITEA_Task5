@@ -29,18 +29,19 @@ main{
 	background-color: rgb(255, 233, 204);
 }
 .main_container,
-.info_container{
+.info_container,
+.main_title{
 	width: 90%;
 	margin: 0 auto;
 }
 .main_title{
-	width: 20%;
-	margin: 0 auto;
 	text-align: center;
 	font-size: 32px;
 	font-weight: 700;
 	padding: 20px 0;
 	text-decoration: underline;
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
 }
 .slider_block,
 .info_container{
