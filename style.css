@@ -59,6 +59,7 @@ main{
 	display: inline-block;
 	align-items: center;
 	flex-wrap: nowrap;
+	background-color: #fffbe091;
 	border: 2px solid white;
 	border-radius: 10px;
 	padding: 15px 25px;
@@ -92,15 +93,16 @@ main{
 	display: flex;
 	align-items: center;
 	flex-wrap: nowrap;
-	border: 2px solid white;
+	background-color: #ffd2b257;
+	border: 2px solid rgb(255, 255, 255);
 	border-radius: 10px;
 	padding: 15px;
 	width: 23%;
 	height: 80px;
-	box-shadow: 4px 4px 0px 1px rgb(52 80 69 / 36%);
+	box-shadow: 4px 4px 0px 1px rgb(89 60 41 / 36%);
 }
 .userCard:hover{
-	box-shadow: 7px 7px 14px 3px rgba(147 215 154 / 83%);
+	box-shadow: 6px 6px 14px 3px rgba(168 101 62 / 53%);
 }
 .userAvatar{
 	width: 40px;
