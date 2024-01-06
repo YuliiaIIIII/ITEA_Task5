@@ -5,6 +5,7 @@ const userList = document.querySelector('.userList');
 const API_URL = 'https://jsonplaceholder.typicode.com/';
 const ALL_USERS = 'users';
 const ALL_POSTS = 'posts';
+const USER_AVATARS = 'photos';
 
 fetch(API_URL + ALL_POSTS)
 	.then(response => response.json())
@@ -23,6 +24,9 @@ async function getUserList() {
 	const allUsers = await fetch(API_URL + ALL_USERS);
 	const users = await allUsers.json();
 
+	const allPhotos = await fetch(API_URL + USER_AVATARS);
+	const photos = await allPhotos.json();
+
 	users.forEach(user => {
 		function addUser() {
 			const userCard = document.createElement('div');
@@ -31,6 +35,11 @@ async function getUserList() {
 
 			let imgDiv = document.createElement('div');
 			imgDiv.setAttribute('class', 'userAvatar');
+			const userAvatar = photos.find(photo => photo.id === user.id);
+
+			if (userAvatar) {
+					imgDiv.style.backgroundImage = `url(${userAvatar.url})`;
+			}
 			userCard.appendChild(imgDiv);
 
 			let nameDiv = document.createElement('div');
