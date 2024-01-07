@@ -1,22 +1,28 @@
-// 2) блок мейн в якому слайдер з 10 постів 
-const userPosts = document.querySelector('.userPosts');
-const userList = document.querySelector('.userList');
-
 const API_URL = 'https://jsonplaceholder.typicode.com/';
 const ALL_USERS = 'users';
 const ALL_POSTS = 'posts';
 const USER_AVATARS = 'photos';
+const userList = document.querySelector('.userList');
 
-fetch(API_URL + ALL_POSTS)
-	.then(response => response.json())
-	.then(posts => {
-		posts = posts.sort(() => Math.random() - 0.5).slice(0, 10);
-		posts.forEach(post => {
-		const postElement = document.createElement("div");
-		postElement.setAttribute('class','post_card')
-		postElement.innerHTML = `<h4>${post.title}</h4><p>${post.body}</p>`;
-		userPosts.appendChild(postElement);
+document.addEventListener('DOMContentLoaded', function () {
+	const swiper = new Swiper('.swiper_container', {
+			slidesPerView: 3,
+			spaceBetween: 25,
+			navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+			},
 	});
+
+	fetch(API_URL + ALL_POSTS)
+			.then(response => response.json())
+			.then(posts => {
+					posts = posts.sort(() => Math.random() - 0.5).slice(0, 10);
+					posts.forEach(post => {
+							const slide = `<div class="swiper-slide post_card"><h4>${post.title}</h4><p>${post.body}</p></div>`;
+							swiper.appendSlide(slide);
+					});
+			});
 });
 
 async function getUserList() {

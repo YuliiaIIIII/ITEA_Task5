@@ -11,6 +11,7 @@
 	text-align: center;
 }
 .header_container{
+	z-index: 100;
 	display: flex;
 	position: fixed;
 	justify-content: center;
@@ -47,39 +48,41 @@ main{
 .info_container{
 	padding-top: 100px;
 }
-.userPosts{
-	display: flex;
-	justify-content: center; 
-	flex-wrap: wrap; 
-	gap: 30px; 
-	padding-top: 10px; 
-	padding-bottom: 30px
+.swiper_container{
+	overflow: hidden;
+}
+.swiper-wrapper{
+	padding-bottom: 30px;
+}
+.swiper-button-next,
+.swiper-button-prev{
+	color: #1c6a1c;
+	top: 320px;
 }
 .post_card{
 	display: inline-block;
-	align-items: center;
-	flex-wrap: nowrap;
 	background-color: #fffbe091;
 	border: 2px solid white;
 	border-radius: 10px;
-	padding: 15px 25px;
-	width: 30%;
-	box-shadow: 4px 4px 0px 1px rgba(85, 151, 125, 0.36);
+	padding: 15px 20px;
+	max-width: 380px;
+	min-height: 250px;
+	box-shadow: 4px 4px 6px 2px rgba(85, 151, 125, 0.36);
 }
 .post_card>h4{
 	padding: 0 10px 15px;
-	font-size: 26px;
+	font-size: 22px;
 	font-weight: 600;
 	text-align: center;
 	text-decoration: overline;
 	text-decoration-color: #3f8a5b;
-	line-height: 40px;
+	line-height: 30px;
 }
 .post_card>p{
 	text-align: justify;
 	padding: 0 10px;
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 18px;
+	line-height: 20px;
 }
 .userList{
 	display: flex; 
@@ -149,8 +152,8 @@ a:visited{
 	font-weight: 300;
 }
 .button_back{
-		text-align: center;
-		padding-bottom: 20px;
+	text-align: center;
+	padding-bottom: 20px;
 }
 .button{
 	display: inline-block;
